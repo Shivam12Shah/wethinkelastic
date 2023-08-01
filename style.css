@@ -84,6 +84,7 @@ body {
 #hello h1 {
     padding: 5vw 3vw;
     margin-top: 5vw;
+    /* background-color: red; */
 
 }
 
@@ -94,13 +95,13 @@ body {
     line-height: .9;
     font-size: 41vw;
     letter-spacing: -3.8vw;
-    color: #F3C77C;
-    text-align: center;
-    position: relative;
+    color: #F3C77C; 
     display: inline-block;
-    text-align: center;
-    font-stretch: narrower;
     left: -20px;
+    opacity: 1;
+    position: relative;
+    /* top: 100%; */
+    /* overflow: hidden; */
 }
 
 #hero h2 {
@@ -203,6 +204,7 @@ font-weight: 300;
     grid-template-rows: 1fr 1fr 1fr ;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
     margin-top: -10vw;
+    /* transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s; */
 }
 #projects h4{
     color: white;
@@ -277,15 +279,18 @@ font-weight: 300;
 
 }
 #cursor{
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
     position: fixed;
-        background-color: white;
+    /* margin-left: -50px;
+    margin-top: -50px; */
+    background-color: rgb(157, 42, 42);
     border-radius: 50%;
     z-index: 999;
-    opacity: 0;
-    transition: all ease 0.3s;
+
+    pointer-events: fill;
 }
+
 #page2-last{
     text-align: center;
     display: flex;
@@ -449,4 +454,72 @@ font-weight: 300;
         width: 100%;
     }
     
+}
+#page6{
+    width: 100%;
+    height: 50vh;
+
+}
+#page6 h1{
+    font-size: 6vw;
+    font-weight: 100;
+    font-family: b;
+    color: #695F53;
+    padding: 100px 20px 20px 20px;
+}
+#page6 h1 span{
+    font-size: 6vw;
+    font-weight: 100;
+    font-family: b;
+    color: #E7CFB1;
+    position: relative;
+}
+#page6 #contacts{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+#page6 h1 span::after{
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom:3px;
+    left: 0;
+    background-color:#E7CFB1;
+    transition: all ease 0.4s;
+    
+}
+#contacts a{
+    color: white;
+    text-decoration: none;
+}
+#page6 h1:hover span::after{
+    animation-name: scroller;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+#loader{
+    width: 100vw;
+    height: 100vh;
+    background-color:#F3C77C;
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.7s;
+    pointer-events: none;
+}
+#loader-img{
+    width: 300px;
+    /* background-color: red; */
+    overflow: hidden;
+}
+#loader-img img{
+    width: 300px;
+    /* background-color: red; */
 }
