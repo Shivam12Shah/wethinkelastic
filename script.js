@@ -54,8 +54,20 @@ gsap.to("#page1-video",{
     scroller:"#main",
     start:"top 90%",
     end:"top -40%",
-    markers:true,
+    // markers:true,
     scrub:3,
+  }
+})
+gsap.to("#h1-section",{
+  x:"-65%",
+  scrollTrigger:{
+    trigger:"#page3",
+    scroller:"#main",
+    start:"top 0%",
+    end:"top -100%",
+    markers:true,
+    scrub:1,
+    pin:true
   }
 })
 
@@ -68,8 +80,8 @@ window.addEventListener("mousemove", function(dets){
 document.querySelectorAll(".project-video").forEach(function(dets){
   dets.addEventListener("mouseenter",function(){
     cursor.style.opacity=1
-    dets.style.scale= 0.9
-    dets.lastElementChild.style.scale = 1.2
+    dets.style.scale= 0.96
+    dets.lastElementChild.style.scale = 1.08
   })
 })
 document.querySelectorAll(".project-video").forEach(function(dets){
@@ -84,8 +96,8 @@ document.querySelectorAll(".project-video").forEach(function(dets){
 document.querySelectorAll(".project-img").forEach(function(dets){
   dets.addEventListener("mouseenter",function(){
     cursor.style.opacity=1
-    dets.style.scale= 0.9
-    dets.lastElementChild.style.scale = 1.2
+    dets.style.scale= 0.96
+    dets.lastElementChild.style.scale = 1.08
 
   })
 })
